@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Riverstone Excavating</title>
-  <meta name="description" content="Contact Riverstone Excavating for a free estimate on excavation, grading, utilities, and site preparation in Langley and the Fraser Valley.">
+  <title>Contact | Kamloops Retaining Wall</title>
+  <meta name="description" content="Contact Kamloops Retaining Wall for a free estimate on retaining walls, hardscaping, patios, walkways, driveways, and landscaping in Kamloops, BC.">
+  <link rel="icon" type="image/png" href="public/images/favicon.png">
+  <meta property="og:title" content="Contact | Kamloops Retaining Wall">
+  <meta property="og:description" content="Contact Kamloops Retaining Wall for a free estimate on retaining walls, hardscaping, patios, walkways, driveways, and landscaping in Kamloops, BC.">
+  <meta property="og:image" content="public/images/hardscaping.webp">
+  <meta property="og:url" content="contact.html">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -193,56 +199,75 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .section { padding: 4rem 0; }
     }
+  
+    /* Map Section */
+    .map-section { background: var(--concrete); padding: 0; }
+    .map-section iframe { width: 100%; height: 450px; border: 0; display: block; filter: grayscale(20%); }
+
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kamloops Retaining Wall",
+    "image": "public/images/logo.webp",
+    "telephone": "672-648-0339",
+    "email": "Kamloopsretainingwall@gmail.com",
+    "url": "index.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kamloops",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "areaServed": "Kamloops, BC",
+    "foundingDate": "2006",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img src="public/images/logo.png" alt="Riverstone Excavating Ltd.">
+        <img src="public/images/logo.webp" alt="Kamloops Retaining Wall">
       </a>
       <div class="nav-links" id="navLinks">
         <div class="dropdown">
           <a href="services.html">
             Services
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </a>
           <div class="dropdown-menu">
-            <a href="services.html#excavation">Excavation</a>
-            <a href="services.html#site-preparation">Site Preparation</a>
-            <a href="services.html#grading">Grading</a>
-            <a href="services.html#underground-utilities">Underground Utilities</a>
-            <a href="services.html#foundation-drainage">Foundation Drainage</a>
-            <a href="services.html#land-clearing">Land Clearing</a>
             <a href="services.html#retaining-walls">Retaining Walls</a>
-            <a href="services.html#demolition">Demolition</a>
+            <a href="services.html#excavation">Excavation</a>
+            <a href="services.html#hardscaping">Hardscaping</a>
+            <a href="services.html#landscaping">Landscaping</a>
+            <a href="services.html#patios-walkways">Patios &amp; Walkways</a>
+            <a href="services.html#driveways">Driveways</a>
           </div>
         </div>
-        <div class="dropdown">
-          <a href="projects.html">
-            Projects
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <a href="projects.html#residential">Residential</a>
-            <a href="projects.html#commercial">Commercial</a>
-            <a href="projects.html#civil">Civil</a>
-          </div>
-        </div>
+        <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="contact.html#estimate" class="nav-cta">Get Free Estimate</a>
       </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
+  <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src="public/images/bobcat-skidsteer.jpg" alt="Riverstone Excavating contact">
+      <img src="public/images/hardscaping.webp" alt="Contact Kamloops Retaining Wall">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
@@ -252,13 +277,14 @@
     </div>
   </section>
 
+  <!-- Contact Section -->
   <section class="section contact-section" id="estimate">
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
           <h2>Let's Discuss Your Project.</h2>
           <p>
-            Whether you need a foundation excavated, a site graded, underground utilities installed, or land cleared, we would be happy to review your plans and provide an estimate.
+            Whether you need a retaining wall, new patio, walkway, driveway, or full landscape transformation, we would be happy to review your plans and provide an estimate.
           </p>
 
           <div class="contact-method">
@@ -269,7 +295,7 @@
             </div>
             <div>
               <h3>Phone</h3>
-              <p><a href="tel:604-555-0123">604-555-0123</a></p>
+              <p><a href="tel:672-648-0339">672-648-0339</a></p>
             </div>
           </div>
 
@@ -282,7 +308,7 @@
             </div>
             <div>
               <h3>Email</h3>
-              <p><a href="mailto:info@riverstoneexcavating.ca">info@riverstoneexcavating.ca</a></p>
+              <p><a href="mailto:Kamloopsretainingwall@gmail.com">Kamloopsretainingwall@gmail.com</a></p>
             </div>
           </div>
 
@@ -295,7 +321,7 @@
             </div>
             <div>
               <h3>Service Area</h3>
-              <p>Langley, Abbotsford, Surrey, Aldergrove, and the Fraser Valley</p>
+              <p>Kamloops, BC — 1st Ave and Victoria Street</p>
             </div>
           </div>
         </div>
@@ -313,20 +339,18 @@
             </div>
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="(604) 555-0123">
+              <input type="tel" id="phone" name="phone" placeholder="672-648-0339">
             </div>
             <div class="form-group">
               <label for="service">Service Needed</label>
               <select id="service" name="service">
                 <option value="">Select a service</option>
-                <option value="site-preparation">Site Preparation</option>
-                <option value="excavation">Excavation</option>
-                <option value="grading">Grading</option>
-                <option value="underground-utilities">Underground Utilities</option>
-                <option value="foundation-drainage">Foundation Drainage</option>
-                <option value="land-clearing">Land Clearing</option>
                 <option value="retaining-walls">Retaining Walls</option>
-                <option value="demolition">Demolition</option>
+                <option value="excavation">Excavation</option>
+                <option value="hardscaping">Hardscaping</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="patios-walkways">Patios &amp; Walkways</option>
+                <option value="driveways">Driveways</option>
               </select>
             </div>
             <div class="form-group">
@@ -340,12 +364,18 @@
     </div>
   </section>
 
+  <!-- Map Section -->
+  <section class="map-section">
+    <iframe src="https://maps.google.com/maps?q=1st%20Ave%20%26%20Victoria%20St%2C%20Kamloops%2C%20BC&t=&z=16&ie=UTF8&iwloc=&output=embed" title="Map of Kamloops Retaining Wall service area" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="public/images/logo.png" alt="Riverstone Excavating Ltd.">
-          <p>Professional excavation contractor serving Langley and the Fraser Valley with dependable site preparation, grading, utilities, and earthworks.</p>
+          <img src="public/images/logo.webp" alt="Kamloops Retaining Wall">
+          <p>Kamloops retaining wall, hardscaping, excavation, and landscape construction for homeowners throughout Kamloops, BC.</p>
         </div>
         <div class="footer-column">
           <h4>Quick Links</h4>
@@ -353,39 +383,106 @@
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
         </div>
         <div class="footer-column">
           <h4>Services</h4>
+          <a href="services.html#retaining-walls">Retaining Walls</a>
           <a href="services.html#excavation">Excavation</a>
-          <a href="services.html#grading">Grading</a>
-          <a href="services.html#underground-utilities">Utilities</a>
-          <a href="services.html#foundation-drainage">Drainage</a>
+          <a href="services.html#hardscaping">Hardscaping</a>
+          <a href="services.html#landscaping">Landscaping</a>
         </div>
         <div class="footer-column footer-contact">
           <h4>Contact</h4>
-          <p><a href="tel:604-555-0123">Phone: 604-555-0123</a></p>
-          <p><a href="mailto:info@riverstoneexcavating.ca">info@riverstoneexcavating.ca</a></p>
-          <p style="margin-top: 1rem; line-height: 1.6;">Serving Langley, Abbotsford,<br>Surrey, Aldergrove, and the<br>Fraser Valley</p>
+          <p><a href="tel:672-648-0339">Phone: 672-648-0339</a></p>
+          <p><a href="mailto:Kamloopsretainingwall@gmail.com">Kamloopsretainingwall@gmail.com</a></p>
+          <p style="margin-top: 1rem; line-height: 1.6;">
+            Serving Kamloops, BC
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Riverstone Excavating Ltd. All rights reserved.</p>
-        <p>Licensed &bull; Insured &bull; WorkSafeBC Compliant</p>
+        <p>&copy; 2026 Kamloops Retaining Wall. All rights reserved.</p>
+        <p>Licensed &bull; Insured</p>
       </div>
     </div>
   </footer>
 
   <script>
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
+
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
-    mobileMenuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
   </script>
+
 </body>
 </html>

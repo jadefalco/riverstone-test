@@ -3,8 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects | Riverstone Excavating</title>
-  <meta name="description" content="View Riverstone Excavating's portfolio of residential, commercial, and civil excavation projects across Langley and the Fraser Valley.">
+  <title>Projects | Kamloops Retaining Wall</title>
+  <meta name="description" content="Browse retaining walls, hardscapes, patios, walkways, driveways, and landscaping projects completed by Kamloops Retaining Wall.">
+  <link rel="icon" type="image/png" href="public/images/favicon.png">
+  <meta property="og:title" content="Projects | Kamloops Retaining Wall">
+  <meta property="og:description" content="Browse retaining walls, hardscapes, patios, walkways, driveways, and landscaping projects completed by Kamloops Retaining Wall.">
+  <meta property="og:image" content="public/images/retaining-walls.webp">
+  <meta property="og:url" content="projects.html">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -173,135 +179,370 @@
       .footer-bottom { flex-direction: column; text-align: center; }
       .section { padding: 4rem 0; }
     }
+  
+    /* Projects Gallery */
+    .projects-gallery { background: var(--warm-white); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 300px;
+      gap: 1rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--transition), filter 0.4s ease;
+      filter: grayscale(20%);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      transform: translateY(100%);
+      transition: transform 0.4s var(--transition);
+    }
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+    .gallery-caption p {
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    .projects-gallery .gallery-item:nth-child(1),
+    .projects-gallery .gallery-item:nth-child(8),
+    .projects-gallery .gallery-item:nth-child(15) { grid-column: span 2; }
+    @media (max-width: 1024px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 250px; }
+      .projects-gallery .gallery-item:nth-child(1),
+      .projects-gallery .gallery-item:nth-child(8),
+      .projects-gallery .gallery-item:nth-child(15) { grid-column: span 2; }
+    }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 250px; }
+      .projects-gallery .gallery-item:nth-child(1),
+      .projects-gallery .gallery-item:nth-child(8),
+      .projects-gallery .gallery-item:nth-child(15) { grid-column: span 1; }
+    }
+
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Kamloops Retaining Wall",
+    "image": "public/images/logo.webp",
+    "telephone": "672-648-0339",
+    "email": "Kamloopsretainingwall@gmail.com",
+    "url": "index.html",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kamloops",
+      "addressRegion": "BC",
+      "addressCountry": "CA"
+    },
+    "areaServed": "Kamloops, BC",
+    "foundingDate": "2006",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">
-        <img src="public/images/logo.png" alt="Riverstone Excavating Ltd.">
+        <img src="public/images/logo.webp" alt="Kamloops Retaining Wall">
       </a>
       <div class="nav-links" id="navLinks">
         <div class="dropdown">
           <a href="services.html">
             Services
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </a>
           <div class="dropdown-menu">
-            <a href="services.html#excavation">Excavation</a>
-            <a href="services.html#site-preparation">Site Preparation</a>
-            <a href="services.html#grading">Grading</a>
-            <a href="services.html#underground-utilities">Underground Utilities</a>
-            <a href="services.html#foundation-drainage">Foundation Drainage</a>
-            <a href="services.html#land-clearing">Land Clearing</a>
             <a href="services.html#retaining-walls">Retaining Walls</a>
-            <a href="services.html#demolition">Demolition</a>
+            <a href="services.html#excavation">Excavation</a>
+            <a href="services.html#hardscaping">Hardscaping</a>
+            <a href="services.html#landscaping">Landscaping</a>
+            <a href="services.html#patios-walkways">Patios &amp; Walkways</a>
+            <a href="services.html#driveways">Driveways</a>
           </div>
         </div>
-        <div class="dropdown">
-          <a href="projects.html">
-            Projects
-            <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </a>
-          <div class="dropdown-menu">
-            <a href="projects.html#residential">Residential</a>
-            <a href="projects.html#commercial">Commercial</a>
-            <a href="projects.html#civil">Civil</a>
-          </div>
-        </div>
+        <a href="projects.html">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="contact.html#estimate" class="nav-cta">Get Free Estimate</a>
       </div>
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
+  <!-- Page Hero -->
   <section class="page-hero">
     <div class="page-hero-bg">
-      <img src="public/images/excavators.jpg" alt="Riverstone Excavating project gallery">
+      <img src="public/images/retaining-walls.webp" alt="Kamloops retaining wall project gallery">
     </div>
     <div class="page-hero-overlay"></div>
     <div class="page-hero-content">
       <span class="section-eyebrow">Our Work</span>
-      <h1>Projects Across the Fraser Valley</h1>
-      <p>A selection of residential, commercial, and civil excavation and site preparation projects.</p>
+      <h1>Projects Across Kamloops</h1>
+      <p>A gallery of retaining walls, hardscapes, patios, walkways, driveways, and landscape transformations.</p>
     </div>
   </section>
 
-  <section class="section placeholder-section">
+  <!-- Project Gallery -->
+  <section class="section projects-gallery" id="projects">
     <div class="container">
-      <div class="placeholder-content">
-        <h2>Full Project Gallery Coming Soon</h2>
-        <p>We are currently organizing our project portfolio with detailed case studies, before-and-after photos, and project highlights from across Langley and the Fraser Valley.</p>
-        <div class="project-categories">
-          <div class="project-category">
-            <h3>Residential</h3>
-            <p>Foundation excavations, site prep for custom homes, drainage systems, and acreage development.</p>
-          </div>
-          <div class="project-category">
-            <h3>Commercial</h3>
-            <p>Site clearing, grading, underground utilities, and road base preparation for commercial developments.</p>
-          </div>
-          <div class="project-category">
-            <h3>Civil</h3>
-            <p>Road building, stormwater management, trenching, and municipal earthworks projects.</p>
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Project Gallery</span>
+        <h2>Recent Projects</h2>
+        <p>Retaining walls, hardscapes, and outdoor construction completed for Kamloops homeowners.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="public/images/hero.webp" alt="Large retaining wall project">
+          <div class="gallery-caption">
+            <p><strong>Large Retaining Wall</strong> — Engineered to tame a steep slope and create usable yard space.</p>
           </div>
         </div>
-        <a href="contact.html#estimate" class="btn btn-primary">Start Your Project</a>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="public/images/retaining-wall.webp" alt="Retaining wall construction">
+          <div class="gallery-caption">
+            <p><strong>Residential Retaining Wall</strong> — Replaced a failing grade with a clean, structural wall.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="public/images/retaining-walls.webp" alt="Tiered retaining walls">
+          <div class="gallery-caption">
+            <p><strong>Tiered Wall System</strong> — Multiple levels add planting space and visual interest.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="public/images/retaining-walls-prep.jpg" alt="Retaining wall preparation">
+          <div class="gallery-caption">
+            <p><strong>Wall Base Prep</strong> — Proper excavation and compaction set the foundation for a long life.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="public/images/excavation.webp" alt="Excavation project">
+          <div class="gallery-caption">
+            <p><strong>Site Excavation</strong> — Precision digging prepares the ground for walls and hardscapes.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="public/images/roller.jpg" alt="Compaction work">
+          <div class="gallery-caption">
+            <p><strong>Compaction & Base Work</strong> — Every layer is compacted to prevent settling and shifting.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="public/images/hardscaping.webp" alt="Hardscape project">
+          <div class="gallery-caption">
+            <p><strong>Hardscape Feature</strong> — Built-in stone elements add structure and year-round appeal.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="public/images/landscaping.webp" alt="Landscaping project">
+          <div class="gallery-caption">
+            <p><strong>Landscape Installation</strong> — Fresh grading and sod complete the outdoor transformation.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="public/images/landscaping2.webp" alt="Landscaping transformation">
+          <div class="gallery-caption">
+            <p><strong>Landscape Transformation</strong> — New beds and finish work tie the whole yard together.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="public/images/patio.webp" alt="Patio project">
+          <div class="gallery-caption">
+            <p><strong>Patio Installation</strong> — A level paver patio creates space for relaxing and entertaining.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="public/images/patio2.webp" alt="Patio and seating area">
+          <div class="gallery-caption">
+            <p><strong>Patio & Seating Area</strong> — Custom hardscaping extends the living space outdoors.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="public/images/walkway.webp" alt="Walkway project">
+          <div class="gallery-caption">
+            <p><strong>Walkway Installation</strong> — A paved path connects the driveway to the backyard entrance.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="public/images/walkway2.webp" alt="Stone walkway">
+          <div class="gallery-caption">
+            <p><strong>Stone Walkway</strong> — Natural stone adds texture and durability to the garden path.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-1">
+          <img src="public/images/driveway.webp" alt="Driveway project">
+          <div class="gallery-caption">
+            <p><strong>Driveway Construction</strong> — Graded and built to handle daily traffic and runoff.</p>
+          </div>
+        </div>
+        <div class="gallery-item reveal reveal-delay-2">
+          <img src="public/images/driveway2.webp" alt="Driveway surface">
+          <div class="gallery-caption">
+            <p><strong>Driveway Surface</strong> — A clean finish improves curb appeal and access.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="cta" id="contact">
+    <div class="cta-bg">
+      <img src="public/images/retaining-wall.webp" alt="Kamloops retaining wall">
+    </div>
+    <div class="cta-overlay"></div>
+    <div class="cta-content reveal">
+      <span class="section-eyebrow">Start Your Project</span>
+      <h2>Have a Project in Mind?</h2>
+      <p>Contact us today for a free estimate on your retaining wall, hardscape, or landscape project.</p>
+      <a href="contact.html#estimate" class="btn btn-primary">Get Free Estimate</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="public/images/logo.png" alt="Riverstone Excavating Ltd.">
-          <p>Professional excavation contractor serving Langley and the Fraser Valley with dependable site preparation, grading, utilities, and earthworks.</p>
+          <img src="public/images/logo.webp" alt="Kamloops Retaining Wall">
+          <p>Kamloops retaining wall, hardscaping, excavation, and landscape construction for homeowners throughout Kamloops, BC.</p>
         </div>
         <div class="footer-column">
           <h4>Quick Links</h4>
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="services.html">Services</a>
+          <a href="projects.html">Projects</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-column">
           <h4>Services</h4>
+          <a href="services.html#retaining-walls">Retaining Walls</a>
           <a href="services.html#excavation">Excavation</a>
-          <a href="services.html#grading">Grading</a>
-          <a href="services.html#underground-utilities">Utilities</a>
-          <a href="services.html#foundation-drainage">Drainage</a>
+          <a href="services.html#hardscaping">Hardscaping</a>
+          <a href="services.html#landscaping">Landscaping</a>
         </div>
         <div class="footer-column footer-contact">
           <h4>Contact</h4>
-          <p><a href="tel:604-555-0123">Phone: 604-555-0123</a></p>
-          <p><a href="mailto:info@riverstoneexcavating.ca">info@riverstoneexcavating.ca</a></p>
-          <p style="margin-top: 1rem; line-height: 1.6;">Serving Langley, Abbotsford,<br>Surrey, Aldergrove, and the<br>Fraser Valley</p>
+          <p><a href="tel:672-648-0339">Phone: 672-648-0339</a></p>
+          <p><a href="mailto:Kamloopsretainingwall@gmail.com">Kamloopsretainingwall@gmail.com</a></p>
+          <p style="margin-top: 1rem; line-height: 1.6;">
+            Serving Kamloops, BC
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Riverstone Excavating Ltd. All rights reserved.</p>
-        <p>Licensed &bull; Insured &bull; WorkSafeBC Compliant</p>
+        <p>&copy; 2026 Kamloops Retaining Wall. All rights reserved.</p>
+        <p>Licensed &bull; Insured</p>
       </div>
     </div>
   </footer>
 
   <script>
+    // Navbar scroll effect
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
+
+    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
-    mobileMenuBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu on link click
     document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+
+        // Open clicked item if it wasn't already open
+        if (!isOpen) {
+          item.classList.add('open');
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
   </script>
+
 </body>
 </html>
